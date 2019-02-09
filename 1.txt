@@ -5,20 +5,19 @@ if (int(n) % 4 == 0 and int(n) % 100 != 0) or int(n) % 400 == 0:
 else:
     print("No es bisiesto")
 
-
-#Lista de números
+#Lista de nÃºmeros
 up= 1
 while up < 101:
     print (up, end = ' ')
     up += 1
 
-#Calculadora de números primos
+#Calculadora de nÃºmeros primos
 X = input()
 X = int(X)
 if (X == 2 or X == 3 or X == 5 or X == 7) or (X % 2 != 0 and X % 3 != 0 and X % 5 != 0 and X % 7 != 0) and (X != 1):
-    print ("el número " + str(X) + " es primo")
+    print ("el nÃºmero " + str(X) + " es primo")
 else:
-    print("el número " + str(X) + " NO es primo")
+    print("el nÃºmero " + str(X) + " NO es primo")
 
 #binarios
 v = input()
