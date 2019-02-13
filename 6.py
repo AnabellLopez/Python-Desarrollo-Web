@@ -4,7 +4,7 @@ S = input()
 L = list(map(int, S.split(" ")))
 my_array = numpy.array(L)
 print(numpy.reshape(my_array,(3,3)))
-#You are given a X integer array matrix with space separated elements (N = rows and M = columns).Your task is to print the transpose and flatten results.
+#You are given a NxM integer array matrix with space separated elements (N = rows and M = columns).Your task is to print the transpose and flatten results.
 import numpy
 N, M = input().split(" ")
 L = []
