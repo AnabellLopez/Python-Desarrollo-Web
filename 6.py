@@ -14,3 +14,12 @@ for i in range(int(N)):
 my_array = numpy.array(L)
 print(numpy.transpose(my_array))
 print(my_array.flatten())
+#You are given two integer arrays of size NxM and MxP ( N&M  are rows, and P is the column). Your task is to concatenate the arrays along axis 0.
+import numpy
+N, M, P = input().split(" ")
+L = []
+for i in range(int(N)+int(M)):
+    S = list(map(int, input().split(" ")))
+    L.append(list(S))
+my_array = numpy.array(L)
+print(numpy.reshape(my_array,(int(N)+int(M), int(P))))
