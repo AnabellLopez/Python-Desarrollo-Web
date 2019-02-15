@@ -23,3 +23,10 @@ for i in range(int(N)+int(M)):
     L.append(list(S))
 my_array = numpy.array(L)
 print(numpy.reshape(my_array,(int(N)+int(M), int(P))))
+
+# Zeros and Ones
+import numpy
+# c is optional here.
+a,b,*c = map(int,input().split())
+print(numpy.zeros((a,b,*c),dtype=numpy.int))
+print(numpy.ones((a,b,*c),dtype=numpy.int))
