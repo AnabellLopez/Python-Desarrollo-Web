@@ -30,3 +30,8 @@ import numpy
 a,b,*c = map(int,input().split())
 print(numpy.zeros((a,b,*c),dtype=numpy.int))
 print(numpy.ones((a,b,*c),dtype=numpy.int))
+
+#Your task is to print an array of size NxM with its main diagonal elements as 1's and 0's everywhere else.
+import numpy
+N, M = input().split(" ")
+print (str(numpy.eye(int(N), int(M), k = 0)).replace("1"," 1").replace("0"," 0"))
