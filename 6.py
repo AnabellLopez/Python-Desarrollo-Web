@@ -57,3 +57,14 @@ print(str(numpy.multiply(A, B)).replace(".",""))
 print(str(A // B).replace(".",""))
 print(str(numpy.mod(A, B)).replace(".",""))
 print(str(A ** B).replace(".",""))
+
+#You are given a 1-D array, A. Your task is to print the floor, ceil and rint of all the elements of A.
+import numpy
+
+numpy.set_printoptions(sign=' ')
+
+A = list(map(float, input().split(" ")))
+
+print(numpy.floor(A))
+print(numpy.ceil(A))
+print(numpy.rint(A))
