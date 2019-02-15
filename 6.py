@@ -35,3 +35,25 @@ print(numpy.ones((a,b,*c),dtype=numpy.int))
 import numpy
 N, M = input().split(" ")
 print (str(numpy.eye(int(N), int(M), k = 0)).replace("1"," 1").replace("0"," 0"))
+
+#You are given two integer arrays, A and B of dimensions NxM. Your task is to perform the following operations:
+import numpy
+N, M = input().split(" ")
+A = []
+B = []
+for i in range(int(N)):
+    S = list(map(int, input().split(" ")))
+    A.append(S)
+for i in range(int(N)):
+    S = list(map(int, input().split(" ")))
+    B.append(S)
+
+A = numpy.array(A, int)
+B = numpy.array(B, int)
+
+print(str(numpy.add(A, B)).replace(".",""))
+print(str(numpy.subtract(A, B)).replace(".",""))
+print(str(numpy.multiply(A, B)).replace(".",""))
+print(str(A // B).replace(".",""))
+print(str(numpy.mod(A, B)).replace(".",""))
+print(str(A ** B).replace(".",""))
