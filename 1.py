@@ -6,19 +6,19 @@ else:
     print("No es bisiesto")
 
 
-#Lista de números
+#Lista de nÃºmeros
 up= 1
 while up < 101:
     print (up, end = ' ')
     up += 1
 
-#Calculadora de números primos
+#Calculadora de nÃºmeros primos
 X = input()
 X = int(X)
 if (X == 2 or X == 3 or X == 5 or X == 7) or (X % 2 != 0 and X % 3 != 0 and X % 5 != 0 and X % 7 != 0) and (X != 1):
-    print ("el número " + str(X) + " es primo")
+    print ("el nÃºmero " + str(X) + " es primo")
 else:
-    print("el número " + str(X) + " NO es primo")
+    print("el nÃºmero " + str(X) + " NO es primo")
 
 #binarios
 v = input()
@@ -32,3 +32,12 @@ if v // 2 == 1:
     s = s + str(v % 2) + str("1")
 Q = str(s[::-1])
 print(Q)
+
+#Read a given string, change the character at a given index and then print the modified string.
+def mutate_string(string, position, character):
+    return s[:int(i)] + c + s[int(i)+1:]
+if __name__ == '__main__':
+    s = raw_input()
+    i, c = raw_input().split()
+    s_new = mutate_string(s, int(i), c)
+    print s_new
