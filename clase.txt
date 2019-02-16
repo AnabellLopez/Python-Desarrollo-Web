@@ -1,0 +1,240 @@
+cmd (en el buscador)
+cd name-directory (entrar)
+cd .. (una carpeta atras)
+mkdir name-directory (crear carpeta)
+Python -V
+git --version
+
+GIT: ayuda a regresar a un punto anterior en tu código y al trabajo colaborativo
+Github
+Gitlab
+Bitbucket
+
+cls para borrar
+(para crear entorno virtual que no choque)
+venv(entorno virtual para Python)
+	python -m pip --version
+	python -m venv env14
+	call env14\Scripts\activate
+	python -m pip list (para ver que librerias se tienen)
+
+Para instalar pip install "library_name"
+para crear una copia
+	git clone "URL que se copio"
+	dir
+	cd "nombre del repositorio"
+	jupyter notebook (abrirlo en el explorador)
+
+lenguaje de programación: sintaxis que te permite crear/construir un programa
+algoritmo: serie de pasos para resolver una problema. Es una solución. serie de pasos finita.
+programa: ingresas datos que te devuelve datos útiles (información) siempre escrito en lenguaje de programación. Algoritmo.
+
+compilado vs interpretado
+compilado (necesitan compilador para ejecutarse pues tiene que convertirse en código binario .cpf --> .exe)
+interpretado (lenguaje script.No genera un binario en teoría pues se compila linea por linea, utiliza un interprete .py --> .py)
+
+variable: espacio de memoria en la memoria RAM. Tiene un tipo, un nombre y una dirección.
+tipado dinámico: adivina el tipo de variable que le ingresas (php, javascript)
+para realizar alguna operación entre tipos de datos distintos, primero tengo que estandarizar el tipo de dato.
+
+en python todas las variables son enteros
+colocar un r es para evitar que interprete (/ a espacio, por ejemplo)
+python trunca hacia el menos (//)
+potenciación y radicación (**)
+modulo - reciduo (%)
+
+operador      signo		if= if
+igualdad	==		elif= else if
+desigual	!=
+mayor		>
+mayor igual	>=
+menor		<
+menor igual	<=
+
+Estructuras secuenciales --> el código va a efectuar linea por linea en orden descendente
+Estructuras selectivas o condicionales --> Se puede elegir un camino u otro dependiendo de si se cumple o no una condición determinada
+
+print(i, end = ' ') --> end = ' ' sirve para que se vea horizontal y no vertical
+for i in range(2, 11) --> Como en las macros [2,11[
+suma += i == suma = suma + 1
+
+for es para variable finita
+while es mientras sea verdad
+
+
+tarea: Lee un número entero positivo e imprímelo convertido al sistema binario.
+
+----------------------------------------------------------------
+Estructura de datos:
+iterables --> string (como un array, guarda strings - caracteres continuos. Es inmutable e iterable) - listas (mutable/lineal se puede guardar lo que sea en la lista. Es un arreglo más complejo pues permite acceder a un elemento rapidamente pero te permite tener diferentes tipos de caracteres, los puedes ordenar) - tuplas (inmutable. Es como una lista pero con paréntesis) - set (mutable, es perfecto para hacer busquedas. es no lineal) - diccionarios (mutable/inmutable. Tiene un valor más que está guardando. Tiene Keys que permite la busqueda y están acompañadas de un dato)
+
+inmutable --> no modifica su estructura
+mutable --> con la mutabilidad debes realizar una copia, no solo un "=" porque lo tima como un renombre
+
+Estructuras lineales:
+Arrays (una o varias variables continuas y unidas del mismo tipo. Pueden ser lineales y multidimensionales. Tienen un índice; por lo tanto tiene rápido acceso)
+
+Lista enlazada (No está ordenada y no necesariamente son del mismo tipo.permite la rápida inserción de valores pero tiene acceso lento al no tener dirección)
+
+Pilas (Ultimas entradas primeras salidas. Son como una pila de libros)
+
+Colas (Primeras entradas primeras salidas. Como una cola de banco)
+
+Estructura no lineal:
+Arboles (tiene un inicio y luego ramas que se dividen)
+
+Tablas hash (los SETS las usan) (intenta implementar una tabla array de manera astuta) 
+
+STRING EN PYTHON
+string ="123444444"
+#Iterable
+for i in string:
+    print(i, end=" ")
+#objeto
+print(dir(string))
+print(string.find("34")) #indice de la ocurrencia de "34"
+print(string.count("12")) #cuenta cuantos 12 hay en en string
+#split
+s = "1,3,4,6,7"
+print(s.split(",")) #lista de valores separados por coma, default " "
+#join
+string = ",".join(["1","3","4","5","6"]) #unifica el valor; al reves del split
+#esquivar inmutabilidad
+sss="123456"
+sn = sss[:2] + "8" + sss[3:]
+
+
+LISTAS EN PYTHON
+li = list()
+lu = [1, 2, 3]
+lv.append([6, 7]) --> agregar elemento lista
+lv.extenf([6, 7]) --> agregar datos
+lv.clear() --> vaciar lista
+lv.insert (index, elemento) --> agregar valores
+lv.pop() --> eliminar valor inicial
+lv.remove(2) --> eliminar valor específico
+lv.index(1) --> retorna indice de un elemento
+l2 = l1.copy() # l2 = l1[:]
+#slicing crea otro espacio de memoria
+li.sort --> ordenar lista de menor a mayor
+
+TUPLAS EN PYTHON
+#Como una lista pero sin permitirte variaciones
+t = (8, 6, 5, 3)
+l = list(t)
+l.sort()
+t = tuple(l)
+print(t)
+
+SET EN PYTHON
+
+DICCIONARIOS EN PYTHON
+d=dict()
+print(d)
+d= {}
+print(d)
+d = {1:2, 3:4, 5:7, "dos":3}
+print(d)
+d = {"uno":1, "dos":2, "tres":3}
+print(d)
+print(dir(d))
+d= dict([("uno",1), ("dos",2), ("tres",3)])
+print(d)
+
+print(d["tres"])
+print(d.get(4)) #en lugar de d[4] que lance excepción
+
+d[3] = "cuatro"
+print(d)
+d["cuatro"] = 4
+print(d)
+
+for i in d:
+    print(i, end = " ")
+
+#############FUNCIONES#############
+#Definiendo funciones python
+def name_function():
+    print("Funciones ejecutadas")
+    return 5
+
+name_function()
+
+#Pasando Argumentos
+#NUM1 Y NUM2 Son argumentos
+def add(num1, num2):
+    return num1 + num2
+
+# 4 y 10 son parámetros
+add(4, 10)
+--------------------------
+def max2(num1, num2):
+    if num1 > num2:
+        return num1
+    else:
+        return num2
+max2(7, 10)
+---------------------------
+def function():
+    global b #para modificar variables globales
+    b = 5
+    print(b)
+
+b = 10 #variable global
+print(b)
+function()
+print(b)
+--------------------
+#Funciones internas
+
+def function():
+    
+    def function2():
+        var = 200 #Local
+        print(var)
+    
+    var = 100 #nonlocal
+    function2()
+    print(var)
+
+var = 0 #global
+function()
+print(var)
+-----------------------------
+#reduce
+from functools import reduce
+n = reduce(lambda x, y: x + y, [1, 2, 3, 4, 5])
+print(n)
+
+#zip
+x = [2, 3, 4, 5]
+y = [1, 2, 3]
+print(list(zip(x, y)))
+
+###### ahorro de lineas ######
+a, b, c = map(int, input().split())
+
+##KMP##
+tarea 
+Mayor prefijo común:
+Escribe un programa que calcule el más largo prefijo común de una lista de cadenas (sólo minúsculas de a - z).
+Si no tienen prefijo común retorna una cadena vacía ""
+
+Ancho de Cadena:
+Dada una cadena y un ancho. Tienes la tarea de convertir la cadena en un texto que tenga el ancho dado. Garantizamos que este ancho será siempre positivo y menor al tamaño de la cadena.
+
+--------------------------------------------------
+
+####PROGRAMACIÓN ORIENTADA A OBJETOS#####
+Ayuda a la protección de datos
+
+*El centro de la programación estructurada --> te ayuda a modularizar con las funciones para que sean re-llamables. Problema: es insegura porque los datos se pueden cambiar*
+
+Pasamos de trabajar con funciones a trabajar con objetos.
+Se tienen datos encapsulados que nadie puede cambiar/usar.
+Los objetos tienen datos encapsulados (atributo - características) y funciones (método - comportamiento) . conversan entre ellos y son varios pequeños.
+El objeto representa una cosa del mundo real.
+Una clase es la plantilla con la que defines al objeto.
+clase (tipo de dato) - objeto (dato/valor específico)
+
+primer atributo de cualquier clase "self"
