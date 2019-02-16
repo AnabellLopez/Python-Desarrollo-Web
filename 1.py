@@ -41,3 +41,14 @@ if __name__ == '__main__':
     i, c = raw_input().split()
     s_new = mutate_string(s, int(i), c)
     print s_new
+
+#In this challenge, the user enters a string and a substring. You have to print the number of times that the substring occurs in the given string. String traversal will take place from left to right, not from right to left.    
+def count_substring(string, sub_string):
+return len([i for i in range(len(string)) if string[i:i+len(sub_string)] == sub_string])
+
+if __name__ == '__main__':
+    string = raw_input().strip()
+    sub_string = raw_input().strip()
+    
+    count = count_substring(string, sub_string)
+    print count
