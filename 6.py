@@ -71,7 +71,6 @@ print(numpy.rint(A))
 
 #You are given a 2-D array with dimensions NxM. Your task is to perform the sum tool over axis 0 and then find the product of that result.
 import numpy
-
 N, M = input().split(" ")
 A = []
 for i in range(int(N)):
@@ -79,3 +78,12 @@ for i in range(int(N)):
     A.append(S)
 B = numpy.sum(A, axis = 0)
 print(numpy.prod(B))
+
+#You are given a 2-D array with dimensions NxM. Your task is to perform the min function over axis 1 and then find the max of that.
+import numpy
+N, M = input().split(" ")
+A = []
+for i in range(int(N)):
+    S = list(map(int, input().split(" ")))
+    A.append(S)
+print(numpy.max(numpy.min(A, axis = 1)))
